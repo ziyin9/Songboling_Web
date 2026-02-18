@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Hero Section with Background Image -->
+    <div class="hero" style="background-image: url('https://imgs.gvm.com.tw/upload/gallery/20181029/54602_01.jpg');">
+        <div class="hero-content">
+            <h1>Welcome to Songboling 🍵</h1>
+            <h3>Taiwan's Premier Tea-Producing Region</h3>
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <div style="text-align: center; padding: 2rem 0;">
+        <h2 style="display: block; text-align: center;">Taiwan's Largest Tea Region</h2>
+        <p style="font-size: 1.2rem; color: #555; max-width: 800px; margin: 1.5rem auto; line-height: 1.8;">
+            Located in Mingjian Township, Nantou County, Songboling is Taiwan's largest tea-producing region. 
+            Blessed with ideal climate conditions, it nurtures the renowned "Songboling Evergreen Tea". 
+            Beyond tea culture, this area features the majestic Shotentien Temple, 
+            beautiful mountain trails, and rich ecological resources.
+        </p>
+    </div>
+
+    <!-- Feature Grid -->
+    <div class="feature-grid">
+        <div class="feature-item">
+            <div class="feature-icon">🍵</div>
+            <h3>Tea Culture</h3>
+            <p>Discover premium teas like Four Seasons Spring, Jin Xuan, and Oolong. Experience the complete farm-to-cup journey.</p>
+            <a href="/tea-culture" class="btn">Explore Tea Culture</a>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-icon">⛩️</div>
+            <h3>Cultural Heritage</h3>
+            <p>Visit Shotentien Temple, Taiwan's main center of Xuantian Shangdi worship, and immerse in spiritual culture.</p>
+            <a href="/tourism" class="btn">Tourism & Sights</a>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-icon">🌱</div>
+            <h3>Farm Experience</h3>
+            <p>Pick tea leaves, process them, and enjoy authentic tea tasting in a traditional rural setting.</p>
+            <a href="/book-experience" class="btn">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Featured Images Section -->
+    <h2 style="text-align: center; margin-top: 3rem;">The Beauty of Songboling</h2>
+    
+    <div class="image-container" style="margin-top: 2rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgfT5JKtMdFgHFBaC56l9mSD0hpX2sjRlYbw&s" 
+             alt="Songboling Tea Plantations" />
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 2rem;">
+        <div class="image-container">
+            <img src="https://lh3.googleusercontent.com/J5XRPrbCC65lsHYi017CCFn4xboVL9Y17I9M8ObQ-Y2dRB46gUdEgMBNMfzIp05iAADdTOT2IEVG9Azf5ek=w800" 
+                 alt="Shotentien Temple" />
+        </div>
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK9JONygNxE5IP38rQfXPukSbY1Zqhcyr-5Q&s" 
+                 alt="Tea Picking Experience" />
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 20px;">
+        <h2 style="color: #1b5e20; border: none; margin-bottom: 1rem;">Ready to Explore Songboling?</h2>
+        <p style="font-size: 1.2rem; color: #2e7d32; margin-bottom: 2rem;">
+            Book your tea country journey now and experience authentic Taiwan tea culture!
+        </p>
+        <a href="/book-experience" class="btn" style="font-size: 1.3rem; padding: 18px 40px;">
+            🌟 Start Your Journey
+        </a>
+    </div>
+{% endblock %}

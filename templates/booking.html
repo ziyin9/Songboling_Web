@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 style="text-align: center; margin-bottom: 1rem;">🌱 Farm Experience Booking</h1>
+    <p style="text-align: center; font-size: 1.3rem; color: #555; margin-bottom: 3rem;">
+        Book your exclusive tea country experience and enjoy the complete farm-to-cup journey
+    </p>
+
+    {% if success %}
+        <!-- Success Message -->
+        <div class="success-message">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Booking Confirmed!</h2>
+            <div style="font-size: 1.2rem; line-height: 2; margin: 2rem 0;">
+                <p>Hello <strong>{{ name }}</strong>,</p>
+                <p>You have successfully booked <strong style="color: #2e7d32;">{{ farm }}</strong></p>
+                <p>Experience Date: <strong style="color: #2e7d32;">{{ date }}</strong></p>
+            </div>
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin: 2rem 0; text-align: left;">
+                <h3 style="color: #2e7d32; margin-bottom: 1rem;">📋 Important Information</h3>
+                <ul style="line-height: 2;">
+                    <li>Please arrive at the farm <strong>15 minutes early</strong></li>
+                    <li>Recommended attire: <strong>casual clothing and sneakers</strong></li>
+                    <li>Please bring <strong>sunscreen and drinking water</strong></li>
+                    <li>In case of rain, we will contact you in advance to reschedule</li>
+                    <li>Payment for the experience is due on-site</li>
+                </ul>
+            </div>
+            <p style="margin-top: 2rem; font-size: 1.1rem;">
+                We look forward to seeing you in Songboling! 🍵
+            </p>
+            <a href="/" class="btn" style="margin-top: 1.5rem; font-size: 1.2rem;">Return Home</a>
+        </div>
+    {% else %}
+        <!-- Booking Form -->
+        <div class="image-container" style="margin-bottom: 3rem;">
+            <img src="https://www.watchmedia01.com/web/images/ckfinder/images/20210530194142.jpg" 
+                 alt="Tea Farm Experience" />
+        </div>
+
+        <div class="card" style="background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); border-left-color: #66bb6a;">
+            <h3 style="color: #2e7d32; margin-bottom: 1rem;">🎯 Experience Includes</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="background: white; padding: 1.5rem; border-radius: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🌿</div>
+                    <h4 style="color: #388e3c;">Tea Plantation Tour</h4>
+                    <p>Expert explanations of tea varieties, growing environment, and cultivation techniques</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✂️</div>
+                    <h4 style="color: #388e3c;">Tea Picking</h4>
+                    <p>Hand-pick one bud and two leaves, experience a tea picker's work</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔥</div>
+                    <h4 style="color: #388e3c;">Tea Processing DIY</h4>
+                    <p>Learn traditional tea-making: rolling, fermenting, and roasting</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">☕</div>
+                    <h4 style="color: #388e3c;">Professional Tea Tasting</h4>
+                    <p>Sample various tea types and learn tea culture knowledge</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Available Farms -->
+        <h2 style="margin-top: 3rem; text-align: center;">🏡 Partner Farms</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin: 2rem 0;">
+            <div class="card" style="text-align: center;">
+                <div class="image-container" style="margin-bottom: 1rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdIMww1UoQ7i_YeQglboCfNPOR7Bdl6h6iig&s" 
+                         alt="Mingjian Tea Garden" />
+                </div>
+                <h3 style="color: #2e7d32;">Mingjian Tea Garden</h3>
+                <p>The most comprehensive professional tea garden with complete processing equipment and tour facilities</p>
+                <p style="color: #666; font-size: 0.95rem;">⭐⭐⭐⭐⭐ (126 reviews)</p>
+            </div>
+
+            <div class="card" style="text-align: center;">
+                <div class="image-container" style="margin-bottom: 1rem;">
+                    <img src="https://www.ourtable.com.tw/assets/img/2019spring/06-s.jpg" 
+                         alt="Evergreen Family Farm" />
+                </div>
+                <h3 style="color: #2e7d32;">Evergreen Family Farm</h3>
+                <p>A warm family-run farm offering authentic farmhouse cuisine and friendly service</p>
+                <p style="color: #666; font-size: 0.95rem;">⭐⭐⭐⭐⭐ (98 reviews)</p>
+            </div>
+
+            <div class="card" style="text-align: center;">
+                <div class="image-container" style="margin-bottom: 1rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW5IILw9yiBXQDvAZN705BEyyrcw4rykbXBA&s" 
+                         alt="Shotentien Organic Farm" />
+                </div>
+                <h3 style="color: #2e7d32;">Shotentien Organic Farm</h3>
+                <p>Committed to organic farming, blending religious culture with ecological agriculture</p>
+                <p style="color: #666; font-size: 0.95rem;">⭐⭐⭐⭐⭐ (87 reviews)</p>
+            </div>
+        </div>
+
+        <!-- Booking Form -->
+        <h2 style="text-align: center; margin-top: 4rem;">📝 Booking Information</h2>
+        
+        <form method="POST" action="/book-experience">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <label for="name">👤 Your Name *</label>
+                <input type="text" id="name" name="name" placeholder="e.g., John Smith" required>
+
+                <label for="date">📅 Visit Date *</label>
+                <input type="date" id="date" name="date" required min="{{ today }}">
+
+                <label for="farm">🏡 Choose a Farm *</label>
+                <select id="farm" name="farm" required>
+                    <option value="" disabled selected>Please select a farm</option>
+                    <option value="Mingjian Tea Garden">Mingjian Tea Garden</option>
+                    <option value="Evergreen Family Farm">Evergreen Family Farm</option>
+                    <option value="Shotentien Organic Farm">Shotentien Organic Farm</option>
+                </select>
+
+                <label for="activity">🎯 Experience Type *</label>
+                <select id="activity" name="activity" required>
+                    <option value="" disabled selected>Please select an experience</option>
+                    <option value="Tea Picking">🌿 Tea Picking Experience - NT$500/person</option>
+                    <option value="Tea Processing DIY">🔥 Tea Processing DIY - NT$800/person</option>
+                    <option value="Tea Tasting">☕ Professional Tea Tasting - NT$600/person</option>
+                    <option value="Complete Package">🎁 Complete Package (All Included) - NT$1500/person</option>
+                </select>
+
+                <div style="background: #fff3e0; padding: 1.5rem; border-radius: 10px; margin: 2rem 0; border-left: 5px solid #ff9800;">
+                    <h4 style="color: #e65100; margin-bottom: 0.5rem;">💡 Important Notes</h4>
+                    <ul style="font-size: 0.95rem; line-height: 1.8;">
+                        <li>Experience duration: approximately <strong>3-4 hours</strong></li>
+                        <li>Recommended start times: <strong>9:00 AM</strong> or <strong>2:00 PM</strong></li>
+                        <li>Limited to <strong>20 people</strong> per session</li>
+                        <li>For cancellation or rescheduling, please notify us <strong>3 days</strong> in advance</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button type="submit" class="btn" style="font-size: 1.3rem; padding: 18px 50px;">
+                        ✨ Confirm Booking
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="card" style="margin-top: 3rem; background: linear-gradient(135deg, #e3f2fd 0%, #f0f7ff 100%); border-left-color: #42a5f5; text-align: center;">
+            <h3 style="color: #1565c0;">📞 Contact Us</h3>
+            <p style="font-size: 1.1rem; line-height: 2; margin-top: 1rem;">
+                If you have any questions, please feel free to reach out:<br>
+                ☎️ Phone: <strong style="color: #1976d2;">+886-49-2581-258</strong><br>
+                📧 Email: <strong style="color: #1976d2;">info@songboling-tea.com</strong><br>
+                ⏰ Service Hours: Daily 09:00 - 18:00
+            </p>
+        </div>
+    {% endif %}
+{% endblock %}

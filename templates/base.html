@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Songboling - Taiwan's largest tea-producing region. Explore tea culture, local cuisine, and authentic farm experiences.">
+    <meta name="keywords" content="Songboling,Tea Culture,Nantou Tourism,Shotentien Temple,Tea Picking,Taiwan Tea,Four Seasons Spring,Jin Xuan,Oolong">
+    <title>Songboling - Taiwan's Tea Capital</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">🏠 Home</a></li>
+                <li><a href="/tea-culture">🍵 Tea Culture</a></li>
+                <li><a href="/tourism">🏞️ Tourism</a></li>
+                <li><a href="/book-experience">📝 Book Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="color: #c8e6c9; margin-bottom: 1rem;">Songboling</h3>
+                <p style="font-size: 1.1rem;">Taiwan's Premier Tea Region</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0; text-align: left;">
+                <div>
+                    <h4 style="color: #a5d6a7; margin-bottom: 0.5rem;">📍 Address</h4>
+                    <p style="font-size: 0.95rem;">Songboling, Mingjian Township<br>Nantou County, Taiwan</p>
+                </div>
+                <div>
+                    <h4 style="color: #a5d6a7; margin-bottom: 0.5rem;">📞 Contact</h4>
+                    <p style="font-size: 0.95rem;">Phone: +886-49-2581-258<br>Email: info@songboling-tea.com</p>
+                </div>
+                <div>
+                    <h4 style="color: #a5d6a7; margin-bottom: 0.5rem;">🕐 Opening Hours</h4>
+                    <p style="font-size: 0.95rem;">Daily 09:00 - 18:00<br>Open Year-Round</p>
+                </div>
+            </div>
+            <hr style="border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 1.5rem 0;">
+            <p style="font-size: 0.9rem; opacity: 0.9;">
+                &copy; 2026 Songboling Promotion Project<br>
+                Designed with 💚 for Taiwan Tea Culture
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
